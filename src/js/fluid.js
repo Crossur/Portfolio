@@ -415,7 +415,6 @@ function () {
          */
         var gradient = "";
         /* Configure Gradient to Options */
-        console.log(options);
         switch (options) {
           case 'radial':
             gradient = "radial-gradient(" + value + ")";
@@ -438,8 +437,6 @@ function () {
             gradient = "linear-gradient(" + value + ")";
         }
         /* Set Gradient Dom Style */
-
-        console.log(gradient);
 
         canvas.style.backgroundImage = gradient;
       }
@@ -1289,8 +1286,6 @@ function activator(canvas, webGL, colorFormat, PROGRAMS, pointers) {
     if(num==0){
       num++;
       pointers[0].down = true;
-      console.log(num);
-      console.log(pointers[0].down);
     }
     pointers[0].color = { r: 0x17 / 255, g: 0x7a / 255, b: 0xfd / 255 };
   });

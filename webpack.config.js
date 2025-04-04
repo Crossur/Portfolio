@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'docs'), // The folder that will be deployed to GitHub Pages
@@ -14,6 +14,7 @@ module.exports = {
     static: path.resolve(__dirname, 'docs'),
     historyApiFallback: true,
     port: 5051,
+    hot:true,
   },
   module: {
     rules: [

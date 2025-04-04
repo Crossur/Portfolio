@@ -1297,10 +1297,10 @@ function activator(canvas, webGL, colorFormat, PROGRAMS, pointers) {
   canvas.addEventListener('click',()=>{
     pointers[0].down=!pointers[0].down;
   })
-  window.addEventListener('keydown', function (e) {
-    if (e.code === 'KeyP') PARAMS.paused = !PARAMS.paused;
-    if (e.key === ' ') splatStack.push(parseInt(Math.random() * 20) + 5);
-  });
+  // window.addEventListener('keydown', function (e) {
+  //   if (e.code === 'KeyP') PARAMS.paused = !PARAMS.paused;
+  //   if (e.key === ' ') splatStack.push(parseInt(Math.random() * 20) + 5);
+  // });
 }
 /**
  * Set Dither URL

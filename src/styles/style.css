@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+#renderSurface {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 0; 
+}
+
+
+#root {
+  position: absolute;
+  text-align: center;
+  pointer-events: none;
+  width: 100%; 
+  max-width: 100%;
+}
+
+nav, nav.button {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+  #root {
+    font-size: 16px;
+  }
+  nav ul {
+    gap: 8px; 
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    font-size: 14px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 6px; 
+  }
+}
+
+@media (max-width: 480px) { 
+  #root {
+    font-size: 12px;
+  }
+  nav ul {
+    gap: 4px; 
+  }
+}
+
+@font-face {
+  font-family: "Richgold";
+  src: url("../assets/fonts/mainFont.otf");
+}
+
+/* Keyframes for animations */
+@keyframes flowDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flowUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'docs'),
-    filename: 'bundle.js',
-    publicPath: './',
+    path: path.resolve(__dirname, 'docs'), // The folder that will be deployed to GitHub Pages
+    filename: 'bundle.js', // Main JavaScript bundle
+    publicPath: './', // Ensure that the public path is relative (important for GitHub Pages)
   },
   devServer: {
     static: path.resolve(__dirname, 'docs'),
@@ -31,8 +32,8 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'], // Ensure postcss-loader is included
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        type: 'asset/resource',
+        test: /\.(png|jpg|gif|svg)$/i,
+        type: 'asset/resource', // Handling images
       },
     ],
   },
@@ -41,10 +42,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src','index.html'),
-      filename:'index.html',
-      inject:'body'
+      template: path.resolve(__dirname, 'src', 'index.html'), // Template HTML file
+      filename: 'index.html', // Output the HTML file to the /docs folder
+      inject: 'body', // Inject the scripts just before the closing body tag
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/styles', to: 'styles' }, // Copy CSS from /src/styles to /docs/styles
+        { from: 'src/assets', to: 'assets' }, // Copy images and other assets from /src/assets to /docs/assets
+        { from: 'src/js', to: 'js' }, // Copy any JS files from /src/js to /docs/js
+      ],
     }),
   ],
-  devtool: 'eval-source-map',
+  devtool: 'eval-source-map', // For easier debugging
 };

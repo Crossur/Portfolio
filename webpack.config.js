@@ -6,9 +6,9 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'docs'), // The folder that will be deployed to GitHub Pages
-    filename: 'bundle.js', // Main JavaScript bundle
-    publicPath: './', // Ensure that the public path is relative (important for GitHub Pages)
+    path: path.resolve(__dirname, 'docs'),
+    filename: 'bundle.js', 
+    publicPath: './',
   },
   devServer: {
     static: path.resolve(__dirname, 'docs'),
@@ -30,12 +30,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'], // Ensure postcss-loader is included
+        use: ['style-loader', 'css-loader', 'postcss-loader'], 
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/i,
-        type: 'asset/resource', // Handling images
-      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/i,
+      //   type: 'asset/resource', 
+      // },
     ],
   },
   resolve: {
@@ -43,17 +43,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'), // Template HTML file
-      filename: 'index.html', // Output the HTML file to the /docs folder
-      inject: 'body', // Inject the scripts just before the closing body tag
+      template: path.resolve(__dirname, 'src', 'index.html'), 
+      filename: 'index.html', 
+      inject: 'body', 
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/styles', to: 'styles' }, // Copy CSS from /src/styles to /docs/styles
-        { from: 'src/assets', to: 'assets' }, // Copy images and other assets from /src/assets to /docs/assets
-        { from: 'src/js', to: 'js' }, // Copy any JS files from /src/js to /docs/js
+        { from: 'src/styles', to: 'styles' }, 
+        { from: 'src/assets', to: 'assets' },
+        { from: 'src/js', to: 'js' }, 
       ],
     }),
   ],
-  devtool: 'eval-source-map', // For easier debugging
+  devtool: 'eval-source-map', 
 };

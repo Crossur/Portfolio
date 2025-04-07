@@ -5,10 +5,9 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
 
-  // Handle the form submission via AJAX
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus(''); // Reset status before submission
+    setStatus(''); 
 
     const statusElement = document.getElementById("my-form-status");
     const form = event.target;
@@ -80,7 +79,6 @@ const Contact = () => {
           Send
         </button>
 
-        {/* Feedback Message */}
         <p id="my-form-status" className="mt-4 text-white translate-y-[1rem]">{status}</p>
       </form>
     </div>

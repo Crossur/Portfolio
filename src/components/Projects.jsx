@@ -65,7 +65,7 @@ const Projects = () => {
         transition={{ type: "spring", stiffness: 200, damping: 15 }}
       >
         <img
-          src="https://crossur.github.io/Portfolio/assets/images/pokemon.png"
+          src="https://crossur.github.io/Portfolio/assets/images/Pokemon.png"
           alt="Harbor Master"
           className="w-full h-auto object-contain"
         />

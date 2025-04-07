@@ -35,7 +35,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-amber-400">Harbor Master</h2>
           <p className="text-white max-w-md text-lg">
-            Effortlessly deploy, manage, and monitor your applications with easy-to-read insights into key metris.
+            Effortlessly deploy, manage, and monitor your applications with easy-to-read insights into key metrics.
           </p>
           <a
             href="http://35.238.113.97:3000"
@@ -57,7 +57,7 @@ const Projects = () => {
       transition={{ type: "spring", stiffness: 200, damping: 140 }}
     >
       <motion.a
-        href="http://35.238.113.97:3000"
+        href="http://crossur.github.io/Pokemon-Weakness-Finder"
         target="_blank"
         rel="noopener noreferrer"
         className="relative group rounded-xl overflow-hidden shadow-lg max-w-xl w-full pointer-events-auto"

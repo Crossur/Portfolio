@@ -35,7 +35,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-amber-400">Harbor Master</h2>
           <p className="text-white max-w-md text-lg">
-            Effortlessly deploy, manage, and monitor your applications with easy-to-read insights into key metrics.
+            Effortlessly deploy, manage, and monitor your applications with easy-to-read insights into key metris.
           </p>
           <a
             href="http://35.238.113.97:3000"

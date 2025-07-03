@@ -1,0 +1,1 @@
+const canvas=document.getElementById("renderSurface");let myFluid=new Fluid(canvas);myFluid.mapBehaviors({sim_resolution:128,dye_resolution:512,paused:!1,pressure:0,curl:40,multi_color:!1,render_shaders:!0,emitter_size:.1,transparent:!0}),myFluid.applyBackground("gradient","#003b89,#010a28","radial"),myFluid.activate();

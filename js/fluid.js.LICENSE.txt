@@ -1,0 +1,33 @@
+/*!
+ * 
+ *     🌊 fluid-canvas 🌊 - A JavaScript library that allows for easy deployment of WebGL rendered fluid simulations.
+ *     Library By: Malik Tillman
+ *     Version: v0.9.1
+ *     GitHub: https://github.com/malik-tillman/Fluid-JS#readme
+ *     License: ISC 
+ * 
+ */
+
+/*! ../assets/dither.png */
+
+/*! ./defualts */
+
+/*! ./initializer */
+
+/*! no static exports found */
+
+/*!**********************!*\
+  !*** ./src/fluid.js ***!
+  \**********************/
+
+/*!*************************!*\
+  !*** ./src/defualts.js ***!
+  \*************************/
+
+/*!***************************!*\
+  !*** ./assets/dither.png ***!
+  \***************************/
+
+/*!****************************!*\
+  !*** ./src/initializer.js ***!
+  \****************************/

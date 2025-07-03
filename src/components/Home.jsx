@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
+
   return (
     <div
       className="flex items-center justify-center w-full h-screen"

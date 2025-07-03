@@ -13,7 +13,7 @@ const Projects = () => {
         transition={{ type: "spring", stiffness: 200, damping: 30 }}
       >
         <motion.a
-          href="http://35.238.113.97:3000"
+          href="http://35.239.153.238:3000"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group rounded-xl overflow-hidden shadow-lg max-w-xl w-full pointer-events-auto"
@@ -38,7 +38,7 @@ const Projects = () => {
             Effortlessly deploy, manage, and monitor your applications with easy-to-read insights into key metrics.
           </p>
           <a
-            href="http://35.238.113.97:3000"
+            href="http://35.239.153.238:3000"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-amber-400 text-gray-900 font-bold text-lg rounded-lg shadow-lg hover:bg-amber-500 transition self-center md:self-start"

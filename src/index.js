@@ -13,6 +13,7 @@ root.render(
 
 
 // Enable HMR for React components
-// if (module.hot) {
-//   module.hot.accept();
-// }
+if (module.hot) {
+  console.log('is hot');
+  module.hot.accept();
+}

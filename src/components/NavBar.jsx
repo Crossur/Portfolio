@@ -67,6 +67,7 @@ const Navbar = () => {
                   className={`relative px-4 py-2 cursor-pointer transition-all ${
                     isActive ? "text-amber-400" : "text-white"
                   }`}
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   <motion.span whileTap={{ scale: 0.9 }}>{name}</motion.span>
                   {isActive && (
